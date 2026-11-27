@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #fff4e6;
+  color: #3d2c1e;
+  font-family: "Pretendard", "Malgun Gothic", sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(120, 70, 20, 0.12);
+  text-align: center;
+  word-break: keep-all;
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: #e8590c;
+}
+
+h2 {
+  margin: 8px 0 20px;
+}
+
+.sub {
+  color: #8c7a6b;
+  font-size: 14px;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.option {
+  padding: 14px;
+  background: #fff;
+  color: inherit;
+  border: 2px solid #ffd8a8;
+  border-radius: 12px;
+}
+
+.option:hover {
+  background: #fff4e6;
+  border-color: #ff922b;
+}
+
+.option.primary {
+  background: #e8590c;
+  border-color: #e8590c;
+  color: #fff;
+}
+
+.option.primary:hover {
+  background: #d9480f;
+}
+
+a.option {
+  display: block;
+  text-decoration: none;
+}
+
+.picks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.pick {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 20px 8px;
+  background: #fff;
+  color: inherit;
+  border: 2px solid #ffd8a8;
+  border-radius: 16px;
+}
+
+.pick:hover {
+  background: #fff4e6;
+  border-color: #ff922b;
+}
+
+.pick-emoji {
+  font-size: 52px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.grid .option {
+  padding: 12px 4px;
+}
+
+.option.selected {
+  background: #ffe8cc;
+  border-color: #e8590c;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.field select {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  border: 2px solid #ffd8a8;
+  border-radius: 10px;
+  background: #fff;
+  color: inherit;
+}
+
+.store-list {
+  list-style-position: inside;
+  margin-top: 12px;
+  text-align: left;
+}
+
+.store-list li {
+  padding: 12px 4px;
+  border-bottom: 1px solid #ffe8cc;
+}
+
+.store-list a {
+  color: #d9480f;
+  font-weight: bold;
+}
+
+.store-list p {
+  margin-top: 4px;
+}
+
+.link {
+  margin-top: 18px;
+  background: none;
+  border: none;
+  color: #8c7a6b;
+}
+
+.emoji {
+  margin-top: 12px;
+  font-size: 72px;
+}

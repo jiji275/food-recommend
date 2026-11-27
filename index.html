@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>저메추 - 저녁 메뉴 추천</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🍽️ 저메추</h1>
+
+    <!-- 1. 질문 단계 -->
+    <section id="question-view">
+      <p id="progress" class="sub"></p>
+      <h2 id="question"></h2>
+      <div id="options" class="options"></div>
+      <button type="button" id="back" class="link">← 이전 단계</button>
+    </section>
+
+    <!-- 2. 메뉴 2개 중 고르기 -->
+    <section id="result-view" aria-live="polite" hidden>
+      <p id="summary" class="sub"></p>
+      <h2 id="result-title"></h2>
+      <div id="picks" class="picks"></div>
+      <div class="options">
+        <button type="button" id="retry" class="option">🔄 다시 뽑기</button>
+        <button type="button" id="restart" class="option">🏠 처음으로</button>
+      </div>
+      <button type="button" id="result-back" class="link">← 이전 단계</button>
+    </section>
+
+    <!-- 3. 고른 메뉴 -->
+    <section id="chosen-view" aria-live="polite" hidden>
+      <p class="sub">오늘의 메뉴 결정!</p>
+      <div id="chosen-emoji" class="emoji"></div>
+      <h2 id="chosen-name"></h2>
+      <div class="options">
+        <button type="button" id="stores" class="option primary">📍 지역별 추천 가게</button>
+        <button type="button" id="chosen-restart" class="option">🏠 처음으로</button>
+      </div>
+      <button type="button" id="chosen-back" class="link">← 메뉴 다시 고르기</button>
+    </section>
+
+    <!-- 4. 지역 선택 -->
+    <section id="region-view" hidden>
+      <h2>어느 지역에서 찾을까요?</h2>
+      <div id="cities" class="grid"></div>
+      <div id="region-detail" hidden>
+        <label id="gu-field" class="field">
+          <span>구 · 군</span>
+          <select id="gu"></select>
+        </label>
+        <label class="field">
+          <span id="dong-label">동 · 읍 · 면</span>
+          <select id="dong"></select>
+        </label>
+        <div class="options">
+          <button type="button" id="search" class="option primary">🔍 가게 찾기</button>
+        </div>
+      </div>
+      <button type="button" id="region-back" class="link">← 이전</button>
+    </section>
+
+    <!-- 5. 가게 목록 -->
+    <section id="store-view" hidden>
+      <h2 id="store-title"></h2>
+      <p id="store-status" class="sub" aria-live="polite"></p>
+      <ol id="store-list" class="store-list"></ol>
+      <div class="options">
+        <a id="kakao-link" class="option" target="_blank" rel="noopener">🗺️ 카카오맵에서 보기</a>
+        <a id="naver-link" class="option" target="_blank" rel="noopener">🗺️ 네이버 지도에서 보기</a>
+        <button type="button" id="store-restart" class="option">🏠 처음으로</button>
+      </div>
+      <button type="button" id="store-back" class="link">← 지역 다시 고르기</button>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="menus.js"></script>
+  <script src="regions.js"></script>
+  <script src="stores.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
